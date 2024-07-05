@@ -10,6 +10,8 @@ import Dashboard from './Component/Projects/AuthUser/Dashboard.js';
 import Recipes from './Component/Projects/Recipes';
 import UseReducer from './Component/UseReducer/UseReducer';
 import UseState from "./Component/useState/UseState";
+import Callback from './Component/CallBack/Callback.js';
+import Test from './Component/CallBack/Test.js'
 
 function App() {
   return (
@@ -22,13 +24,15 @@ function App() {
       {/* <Https /> */}
       {/* <Recipes /> */}
       {/* <AuthUser /> */}
-      
       <Routes>
         <Route path='/React-Projects' element= {<Login />} />
         <Route path='/AuthUser' element= {<AuthUser />} />
         <Route path='/dashboard' element= {<Dashboard />} />
       </Routes>
       {/* <Login /> */}
+      {/* <Callback /> */}
+      {/* <Test /> */}
+
 
     </div>
   )   
