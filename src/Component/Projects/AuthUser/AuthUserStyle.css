@@ -50,7 +50,7 @@ label {
   margin: 0 1rem 1rem 1rem;
 }
 
-.btn {
+.btn, a{
   padding: 0.5rem 2rem;
   border-radius: 15px;
   background: #006500;
@@ -69,6 +69,7 @@ label {
   background: #ef0000;
   
 }
+
 
 @media screen and (max-width: 600px) {
   form {
@@ -98,6 +99,10 @@ label {
   .box textarea {
     margin-left: 0;
     width: 99%;
+  }
+
+  .new {
+    padding: 0.5rem 0.8rem;
   }
   
 }
