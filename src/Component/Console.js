@@ -1,37 +1,48 @@
 import React, { useState } from 'react'
-
-const ToDo = props => (
-<tr><td><label>{props.id}</label></td>
-  <td><input /></td>
-    <td><label>{props.createdAt}</label></td>
-</tr>
-)
+import { FaStar } from 'react-icons/fa'
+import { toast } from 'react-toastify'
 
 function Console() {
-  const [todos, setTodos] = useState([{
-    id: 'todo1',
-    createdAt:'18:00',
-  },{
-    id: 'todo2',
-    createdAt: '20:30',
-  }]);
-  
-  const reverseOrder = () => {
-    //Reverse is a mutative Operation, so we need to create a new array first.
-    setTodos([...todos].reverse())
+  const [score, setScore] = useState('10')
+  const [comment, setComment] = useState('')
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    if(Number(score) <=5 && comment.length <=10){
+      alert('Please provide a comment explaining why the experience was poor');
+      return;
+    }
+    console.log('Form submitted');
+    setComment('');
+    setScore('10');
   }
+  
   return (
-    <div>
-      <button onClick={reverseOrder}>Reverse</button>
-      <table>
-        <tbody>
-          {todos.map((todo, index) => (
-            <ToDo key={todo.id} id={todo.id} createdAt = {todo.createdAt} />
-          )
-          )}
-        </tbody>
-      </table>
-    </div>
+    
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <h2>Feedback form</h2>
+          <div className='Field'>
+            <label>Score: {score} <FaStar color='#fd0'/></label>
+              <input 
+              type='range' 
+              min='0' 
+              max='10' 
+              value ={score}
+              onChange={(e)=> {setScore(e.target.value) }} />
+              <span>{score}</span>
+          </div>
+          <div className='Field'>
+            <label>Comment: </label>
+            <textarea 
+            value={comment}
+            onChange={(e)=> setComment(e.target.value)}
+            />
+          </div>
+          <button type='submit'>Submit</button>
+        </fieldset>
+      </form>
+      
   )
 }
 
