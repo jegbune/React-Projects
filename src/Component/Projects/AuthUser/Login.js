@@ -13,11 +13,11 @@ function Login() {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
 
-  const inputRef = useRef()
+  // const inputRef = useRef()
   
-  useEffect(()=> {
-    inputRef.current.focus()
-  })
+  // useEffect(()=> {
+  //   inputRef.current.focus()
+  // })
   const handlePassword = () => {
     setPass(pass==='password' ? 'text' : 'password')
 }
@@ -90,7 +90,7 @@ const validate = () => {
             <label>
               User Name
             </label>
-              <input ref= {inputRef} type='text' value= {user} onChange={(e) => setuser(e.target.value)} />
+              <input type='text' value= {user} onChange={(e) => setuser(e.target.value)} />
             </div>
             <div className='label'>
             <label>
