@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useEffect, useRef, useState } from 'react'
 import { FaAsterisk } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -13,6 +13,11 @@ function Login() {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
 
+  const inputRef = useRef()
+  
+  useEffect(()=> {
+    inputRef.current.focus()
+  })
   const handlePassword = () => {
     setPass(pass==='password' ? 'text' : 'password')
 }
@@ -85,7 +90,7 @@ const validate = () => {
             <label>
               User Name
             </label>
-              <input type='text' value= {user} onChange={(e) => setuser(e.target.value)} />
+              <input ref= {inputRef} type='text' value= {user} onChange={(e) => setuser(e.target.value)} />
             </div>
             <div className='label'>
             <label>
