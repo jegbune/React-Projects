@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 
-function Console() {
+function Feedback() {
   const [score, setScore] = useState('10')
   const [comment, setComment] = useState('')
 
@@ -46,4 +46,4 @@ function Console() {
   )
 }
 
-export default Console
+export default Feedback
