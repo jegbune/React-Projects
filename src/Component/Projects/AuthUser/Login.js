@@ -40,7 +40,7 @@ function Login() {
         toast.success('Login Sucessful')
         navigate('/dashboard')
         console.log(data)
-        alert(data.email)
+        // alert(data.email)
       }else {
         toast.error('Wrong Login Creditial' )
       }
