@@ -1,6 +1,6 @@
 .box {
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,8 +21,6 @@ form {
   /* padding: 1rem; */
   width: 90%;
 }
-
-
 
 .label {
   margin-bottom: 1rem;
@@ -72,11 +70,10 @@ form {
 .log {
   background: #025;
 }
+
 .close {
   background: #ef0000;
-  
 }
-
 
 @media screen and (max-width: 600px) {
   body {
@@ -86,7 +83,7 @@ form {
   form {
     margin: 0
   }
-  
+
   .container {
     width: 100%;
     padding: 1rem;
