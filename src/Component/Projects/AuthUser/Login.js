@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import  logo from './logo.svg'
 
-const AuthContext = createContext()
+export const AuthContext = createContext()
 
 function Login() {
   const [pass, setPass] = useState('password')
@@ -97,7 +97,7 @@ const validate = () => {
               Password
             </label>
               <input type={pass} value= {password} onChange={(e) => setPassword(e.target.value)} />
-              <button type='button' disabled ={!password} className='pass' onClick={handlePassword}>Show Password</button>
+              <button type='button' className='pass' onClick={handlePassword}>Show Password</button>
             <p>Forget Password</p>
             </div>
           </div>
